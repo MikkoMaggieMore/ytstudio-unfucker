@@ -1,5 +1,5 @@
 # YouTube Studio Unfucker!
-It unfucks the YouTube Studio livestreaming panel.
+It unfucks the YouTube Studio livestreaming panel to look how it did from 2019-2024.
 
 It also automatically disables vertical streaming, because who the fuck asked for that? (I'd like to "speak" with them...)
 
