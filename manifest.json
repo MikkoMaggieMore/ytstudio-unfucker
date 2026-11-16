@@ -1,0 +1,31 @@
+{
+	"name": "YouTube Studio Unfucker",
+	"description": "Eugh",
+	"version": "0.0.0",
+	"manifest_version": 3,
+	"action": {
+		"default_title": "Title"
+	},
+	"permissions": [
+		"scripting"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://studio.youtube.com/*"
+			],
+			"run_at": "document_start",
+			"js": ["main.js"],
+			"css": ["main.css"]
+		},
+		{
+			"matches": [
+				"*://studio.youtube.com/live_chat*"
+			],
+			"run_at": "document_start",
+			"js": ["chat.js"],
+			"css": ["main.css"],
+			"all_frames": true
+		}
+	]
+}
