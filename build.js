@@ -12,7 +12,7 @@ buildJS();
 
 async function buildJS() {
 	await esbuild.build({
-		entryPoints: ["main.js"],
+		entryPoints: ["main.ts"],
 		format: "esm",
 		sourcemap: true,
 		minify: true,
@@ -22,7 +22,7 @@ async function buildJS() {
 	});
 
 	await esbuild.build({
-		entryPoints: ["chat.js"],
+		entryPoints: ["chat.ts"],
 		format: "esm",
 		sourcemap: true,
 		minify: true,
