@@ -9,6 +9,8 @@ function tryInsert() {
 
 	portraitPreview.parentNode.insertBefore(metadataPanel, portraitPreview);
 	portraitPreview.style.display = "none";
+
+	console.log("Metadata panel insertion completed!");
 }
 
 const observer = new MutationObserver((mutations) => {
@@ -18,6 +20,7 @@ const observer = new MutationObserver((mutations) => {
 
 			if (node.matches(`[test-id="MULTI_ASPECT_MODE_OFF"]`)) {
 				node.click();
+				console.log("Vertical streaming successfully disabled!");
 			} 
 			else if (node.matches(`#right-panel ytls-broadcast-metadata.ytls-stream-settings-widget-renderer`)) {
 				metadataPanel = node;
@@ -29,12 +32,27 @@ const observer = new MutationObserver((mutations) => {
 			}
 			else if (node.matches(`#portrait-preview-container div[role="button"].container.ytcp-dropdown-trigger`)) {
 				node.click();
+				console.log("Vertical streaming dropdown located!");
 			}
 			else if (node.matches(`tp-yt-paper-tab`)) {
 				if (node.getAttribute("unfucked")) return;
 				node.appendChild(document.createElement("tp-yt-paper-ripple"));
 				node.setAttribute("unfucked", "");
 			}
+
+			node.querySelectorAll(`#right-panel ytls-broadcast-metadata.ytls-stream-settings-widget-renderer`).forEach((node2) => {
+				if (node2.getAttribute("unfucked")) return;
+				metadataPanel = node2;
+				tryInsert();
+				node2.setAttribute("unfucked", "");
+			});
+
+			node.querySelectorAll(`#portrait-preview-container.ytls-live-control-room-renderer`).forEach((node2) => {
+				if (node2.getAttribute("unfucked")) return;
+				portraitPreview = node2;
+				tryInsert();
+				node2.setAttribute("unfucked", "");
+			});
 
 			node.querySelectorAll("tp-yt-paper-tab").forEach((node2) => {
 				if (node2.getAttribute("unfucked")) return;
