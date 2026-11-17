@@ -12,7 +12,7 @@ Currently only works on Chromium based browsers. If you are an extension develop
 <img src="https://fifishack.neocities.org/unfuckerOFFLarge.png" />
 <img src="https://fifishack.neocities.org/unfuckerONLarge.png" />
 
-# Building
+## Building
 It's very simple, just clone the project with<br/>
 `git clone https://github.com/MikkoMaggieMore/ytstudio-unfucker.git`
 
@@ -21,7 +21,7 @@ And then you can build with<br/>
 
 After that, the newly built project will be in "dist"
 
-# AI Disclaimer
+## AI Disclaimer
 If you are incapable of programming in Javascript without the use of Generative AI models, please DO NOT contribute to this project.
 
 However, the use of AI is not completely disallowed, it should only be used for debugging or writing things you already understand.
