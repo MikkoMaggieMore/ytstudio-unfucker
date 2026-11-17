@@ -30,6 +30,17 @@ const observer = new MutationObserver((mutations) => {
 			else if (node.matches(`#portrait-preview-container div[role="button"].container.ytcp-dropdown-trigger`)) {
 				node.click();
 			}
+			else if (node.matches(`tp-yt-paper-tab`)) {
+				if (node.getAttribute("unfucked")) return;
+				node.appendChild(document.createElement("tp-yt-paper-ripple"));
+				node.setAttribute("unfucked", "");
+			}
+
+			node.querySelectorAll("tp-yt-paper-tab").forEach((node2) => {
+				if (node2.getAttribute("unfucked")) return;
+				node2.appendChild(document.createElement("tp-yt-paper-ripple"));
+				node2.setAttribute("unfucked", "");
+			});
 		}
 	}
 });
