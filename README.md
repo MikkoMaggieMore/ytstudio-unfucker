@@ -13,8 +13,13 @@ Currently only works on Chromium based browsers. If you are an extension develop
 <img src="https://fifishack.neocities.org/unfuckerONLarge.png" />
 
 ## Building
+You will need Node.js and NPM for this.
+
 It's very simple, just clone the project with<br/>
 `git clone https://github.com/MikkoMaggieMore/ytstudio-unfucker.git`
+
+Then, run<br/>
+`npm install`
 
 And then you can build with<br/>
 `node build`
