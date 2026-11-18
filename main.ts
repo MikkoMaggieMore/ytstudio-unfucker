@@ -13,6 +13,10 @@ function tryInsert() {
 	console.log("Metadata panel insertion completed!");
 }
 
+function hideVerticalStreaming() {
+	document.querySelector(`#portrait-preview-container.ytls-live-control-room-renderer`).style.display = "none";
+}
+
 const observer = new MutationObserver((mutations) => {
 	for (const mutation of mutations) {
 		for (const node of mutation.addedNodes) {
@@ -21,6 +25,7 @@ const observer = new MutationObserver((mutations) => {
 			if (node.matches(`[test-id="MULTI_ASPECT_MODE_OFF"]`)) {
 				node.click();
 				console.log("Vertical streaming successfully disabled!");
+				hideVerticalStreaming();
 			} 
 			else if (node.matches(`#right-panel ytls-broadcast-metadata.ytls-stream-settings-widget-renderer`)) {
 				metadataPanel = node;
@@ -39,6 +44,21 @@ const observer = new MutationObserver((mutations) => {
 				node.appendChild(document.createElement("tp-yt-paper-ripple"));
 				node.setAttribute("unfucked", "");
 			}
+
+			node.querySelectorAll(`[test-id="MULTI_ASPECT_MODE_OFF"]`).forEach((node2) => {
+				if (node2.getAttribute("unfucked")) return;
+				node.click();
+				console.log("Vertical streaming successfully disabled!");
+				hideVerticalStreaming();
+				node2.setAttribute("unfucked", "");
+			});
+
+			node.querySelectorAll(`#portrait-preview-container div[role="button"].container.ytcp-dropdown-trigger`).forEach((node2) => {
+				if (node2.getAttribute("unfucked")) return;
+				node.click();
+				console.log("Vertical streaming dropdown located!");
+				node2.setAttribute("unfucked", "");
+			});
 
 			node.querySelectorAll(`#right-panel ytls-broadcast-metadata.ytls-stream-settings-widget-renderer`).forEach((node2) => {
 				if (node2.getAttribute("unfucked")) return;
