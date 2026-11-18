@@ -31,3 +31,24 @@ After that, the newly built project will be in "dist"
 If you are incapable of programming in Javascript or Typescript without the use of Generative AI models, please DO NOT contribute to this project.
 
 However, the use of AI is not completely disallowed, it should only be used for debugging or writing things you already understand.
+
+## Never asked questions but just in case some idiot has some stupid question
+Q: Will u realease ts on the crheomestore?
+
+**A: Maybe, but I definitely won't until V1, because there's still things that need to be added and refined.**
+
+Q: can you upload it to firefox extensions when its finished
+
+**A: No**
+
+Q: why not
+
+**A: fuck you**
+
+Q: Uhhh, I hhmmmm I uhhhhh w- uhhhh erm h uhhhhhh
+
+**A: WTF???**
+
+Q: Can I trust that you will keep updating this?
+
+**A: Hopefully, I do live stream a lot and I have to look at the stream panel a lot, so if there are any huge problems, I'm sure I'd notice them.**
