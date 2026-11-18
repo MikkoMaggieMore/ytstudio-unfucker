@@ -16,7 +16,9 @@ Currently only works on Chromium based browsers. If you are an extension develop
 You will need Node.js and NPM for this.
 
 It's very simple, just clone the project with<br/>
-`git clone https://github.com/MikkoMaggieMore/ytstudio-unfucker.git`
+`git clone https://github.com/MikkoMaggieMore/ytstudio-unfucker.git
+cd ytstudio-unfucker
+`
 
 Then, run<br/>
 `npm install`
