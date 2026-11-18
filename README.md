@@ -27,6 +27,6 @@ And then you can build with<br/>
 After that, the newly built project will be in "dist"
 
 ## AI Disclaimer
-If you are incapable of programming in Javascript without the use of Generative AI models, please DO NOT contribute to this project.
+If you are incapable of programming in Javascript or Typescript without the use of Generative AI models, please DO NOT contribute to this project.
 
 However, the use of AI is not completely disallowed, it should only be used for debugging or writing things you already understand.

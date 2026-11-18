@@ -8,7 +8,7 @@ function tryInsert() {
 	if (portraitPreview.previousElementSibling === metadataPanel) return;
 
 	portraitPreview.parentNode.insertBefore(metadataPanel, portraitPreview);
-	portraitPreview.style.display = "none";
+	//portraitPreview.style.display = "none";
 
 	console.log("Metadata panel insertion completed!");
 }
