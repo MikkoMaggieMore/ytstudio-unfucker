@@ -1,1 +1,2 @@
 *.ts linguist-language=TYPESCRIPT
+build.js -linguist-detectable
